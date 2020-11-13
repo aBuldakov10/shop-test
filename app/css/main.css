@@ -425,6 +425,10 @@ ul li:last-child, ol li:last-child, dl li:last-child {
   margin: 0 auto;
 }
 
+section {
+  margin: 70px 0;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -798,6 +802,116 @@ ul li:last-child, ol li:last-child, dl li:last-child {
   top: -7px;
 }
 
+.card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.card-wrapper::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+}
+
+.categories-card {
+  font-size: 1.22222rem;
+  position: relative;
+  margin-right: 35px;
+  padding: 50px 20px 35px;
+  min-width: 280px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.categories-card:last-child {
+  margin-right: 0;
+}
+
+.categories-card:before {
+  content: '';
+  width: 300px;
+  height: 300px;
+  border: 70px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: -130px;
+  right: -130px;
+}
+
+.categories-card button {
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 5px;
+  border: 0;
+  color: inherit;
+}
+
+.card-title {
+  font-size: 1.55556rem;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.card-title:after {
+  content: '';
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  width: 80px;
+  height: 3px;
+}
+
+.card-txt {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.orange {
+  background: #f76c06;
+}
+
+.orange:before {
+  border-color: #fc8128;
+}
+
+.orange .card-title:after,
+.orange button {
+  background: #8ecf04;
+}
+
+.green .card-title:after,
+.green button,
+.yellow .card-title:after,
+.yellow button {
+  background: #f76c06;
+}
+
+.green {
+  background: #8ecf04;
+}
+
+.green:before {
+  border-color: #84bb02;
+}
+
+.yellow {
+  background: #e0c00c;
+}
+
+.yellow:before {
+  border-color: #fcd702;
+}
+
 @media only screen and (min-width: 500px) {
   .wrap {
     display: -webkit-box;
@@ -964,6 +1078,27 @@ ul li:last-child, ol li:last-child, dl li:last-child {
   }
   .header-search {
     background-size: 30px;
+  }
+  .categories-card {
+    margin-right: 67px;
+    padding: 100px 35px 55px;
+    min-width: 420px;
+  }
+  .categories-card:before {
+    width: 440px;
+    height: 440px;
+    top: -200px;
+    right: -150px;
+  }
+  .categories-card button {
+    padding: 20px;
+  }
+  .card-title {
+    font-size: 1.72222rem;
+    margin-bottom: 55px;
+  }
+  .card-title:after {
+    bottom: -25px;
   }
 }
 
