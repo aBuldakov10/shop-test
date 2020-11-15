@@ -29,4 +29,18 @@
   $addressListTitle.on('click', function () {
     $('.info-list', $addressListTitle).toggleClass('open');
   });
+
+  /** Slick plugin **/
+  $(document).ready(function(){
+    $('.slider-wrap').slick(
+      {
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        speed: 500,
+        autoplaySpeed: 4000
+      }
+    );
+  });
+
 })(jQuery);
