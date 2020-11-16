@@ -31,7 +31,7 @@
   });
 
   /** Slick plugin **/
-  $(document).ready(function(){
+  $(document).ready(function() {
     $('.slider-wrap').slick(
       {
         autoplay: true,
@@ -42,5 +42,4 @@
       }
     );
   });
-
 })(jQuery);
