@@ -1,5 +1,6 @@
 [
   {
+    "productId": "6419657",
     "productTip": "новый",
     "image": "../img/product-item-1.png",
     "title": "product-item-1",
@@ -9,6 +10,7 @@
     "price": "188.40 грн"
   },
   {
+    "productId": "345762",
     "productTip": "акция",
     "image": "../img/product-item-1.png",
     "title": "product-item-2",
@@ -18,6 +20,7 @@
     "price": "199.99 грн"
   },
   {
+    "productId": "3457123",
     "productTip": "новый",
     "image": "../img/product-item-1.png",
     "title": "product-item-3",
@@ -27,6 +30,7 @@
     "price": "123.45 грн"
   },
   {
+    "productId": "8763451",
     "productTip": "акция",
     "image": "../img/product-item-1.png",
     "title": "product-item-4",
@@ -36,6 +40,7 @@
     "price": "110.34 грн"
   },
   {
+    "productId": "456272",
     "productTip": "новый",
     "image": "../img/product-item-1.png",
     "title": "product-item-5",
@@ -45,6 +50,7 @@
     "price": "88.71 грн"
   },
   {
+    "productId": "1236859",
     "productTip": "акция",
     "image": "../img/product-item-1.png",
     "title": "product-item-6",

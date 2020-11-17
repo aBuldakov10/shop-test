@@ -1,6 +1,10 @@
 (function () {
   /** Variables **/
   const $mobBurgerMenu = $('.mob-burger-menu'),
+        $headerCart = $('header .cart'),
+        $popupCartWrap = $('.popup-cart-wrap'),
+        $cartPopupClose = $('.cart-popup button'),
+        $countCartItems = $('header .cart span'),
         $navigation = $('.navigation'),
         $catalogGoodsBtn = $('.catalog-btn'),
         $catalogGoodslist = $('.catalog-lst'),
@@ -55,7 +59,7 @@
 
       (item.isDelivery === true) ? deliveryValue = 'Есть доставка' : deliveryValue = 'Без доставки';
 
-      renderGoodItem += '<div class="good-item">';
+      renderGoodItem += '<div class="good-item" data-product-id="' + item.productId + '">';
       renderGoodItem += '<div class="product-tip ' + productTipClass + '">' + item.productTip + '</div>';
       renderGoodItem += '<img src="' + item.image + '" title="' + item.title + '">';
       renderGoodItem += '<p class="good-item-title">' + item.productTitle + '</p>';
@@ -120,5 +124,91 @@
       );
     });
   });
+
+  /** Cart popup**/
+  // Open cart popup
+  $headerCart.on('click', function () {
+    $('body').addClass('no-scroll');
+    $popupCartWrap.addClass('open');
+
+    //Empty variable for render
+    var cartRender = '';
+
+    // Render form array after chosen products
+    cartArray.forEach(function (item) {
+      cartRender += '<div class="choosen-good-item" data-product-id="' + item.productId + '">';
+      cartRender += '<img src="' + item.productImg + '" title="img-title">';
+      cartRender += '<div>';
+      cartRender += '<p>' + item.productTitle + '</p>';
+      cartRender += '<p class="choosen-good-price">' + item.productPrice + '</p>';
+      cartRender += '</div>';
+      cartRender += '</div>';
+
+      $('.choosen-goods').html(cartRender);
+    });
+  });
+
+  // Close cart popup
+  $cartPopupClose.on('click', function () {
+    $popupCartWrap.removeClass('open');
+    $('body').removeClass('no-scroll');
+  });
+
+  // Add product to cart
+  var cartArray = [];
+
+  $bestGoodsWrapper.on('click', 'button', function () {
+    var thisParent = $(this).closest('.good-item'),
+        thisId = thisParent.attr('data-product-id'),
+        thisImg = $('img', thisParent).attr('src'),
+        thisTitle = $('.good-item-title', thisParent).html(),
+        thisPrice = $('.price', thisParent).html(),
+        cartProductItem = {};
+
+    // Create object with product item data
+    cartProductItem.productId = thisId;
+    cartProductItem.productImg = thisImg;
+    cartProductItem.productTitle = thisTitle;
+    cartProductItem.productPrice = thisPrice;
+
+    // Add object to array
+    cartArray.push(cartProductItem);
+
+    // Remove duplicates function
+    function removeDuplicates(originalArray, prop) {
+      var newArray = [];
+      var lookupObject = {};
+
+      for(var i in originalArray) {
+        lookupObject[originalArray[i][prop]] = originalArray[i];
+      }
+
+      for(i in lookupObject) {
+        newArray.push(lookupObject[i]);
+      }
+      return newArray;
+    }
+
+    var stringArray = JSON.stringify(removeDuplicates(cartArray, "productId"));
+    var cleanArray = JSON.parse(stringArray);
+
+    cartArray = cleanArray;
+
+    // Count total price
+    var totalPrice = 0;
+
+    cleanArray.forEach(function (item) {
+      totalPrice += +item.productPrice.replace(/[^\d.-]/g, '');
+    });
+
+    // Add price to cart
+    $('header .cart .price').html(totalPrice.toFixed(2) + ' грн.');
+
+    // Add amount to cart
+    $countCartItems.html(cleanArray.length);
+  });
+
+  /** Validate form **/
+
 
 })(jQuery);
