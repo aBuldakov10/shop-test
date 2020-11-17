@@ -1,0 +1,56 @@
+[
+  {
+    "productTip": "новый",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-1",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 19V 3.42 А 5.5х2.5",
+    "isDelivery": true,
+    "amount": 23,
+    "price": "188.40 грн"
+  },
+  {
+    "productTip": "акция",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-2",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 18V 3.42 А 5.5х2.5",
+    "isDelivery": false,
+    "amount": 13,
+    "price": "199.99 грн"
+  },
+  {
+    "productTip": "новый",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-3",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 17V 3.42 А 5.5х2.5",
+    "isDelivery": true,
+    "amount": 17,
+    "price": "123.45 грн"
+  },
+  {
+    "productTip": "акция",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-4",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 16V 3.42 А 5.5х2.5",
+    "isDelivery": false,
+    "amount": 21,
+    "price": "110.34 грн"
+  },
+  {
+    "productTip": "новый",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-5",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 15V 3.42 А 5.5х2.5",
+    "isDelivery": true,
+    "amount": 10,
+    "price": "88.71 грн"
+  },
+  {
+    "productTip": "акция",
+    "image": "../img/product-item-1.png",
+    "title": "product-item-6",
+    "productTitle": "Автомобильный блок питания для ноутбука ASUS W5G00A 14V 3.42 А 5.5х2.5",
+    "isDelivery": false,
+    "amount": 25,
+    "price": "111.65 грн"
+  }
+]
