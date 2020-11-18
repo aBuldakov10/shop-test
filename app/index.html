@@ -81,10 +81,10 @@
       <div class="cart-popup">
         <button>close popup</button>
         <p class="form-title">Регистрация</p>
-        <form>
-          <input type="text" placeholder="Имя">
-          <input type="text" placeholder="+38(___)___-___-____">
-          <input type="text" placeholder="E-mail">
+        <form class="validate">
+          <input type="text" placeholder="Имя" name="name">
+          <input type="text" placeholder="+38(___)___-___-____" name="phone">
+          <input type="text" placeholder="E-mail" name="mail">
           <div class="choosen-goods"></div>
           <input type="submit" value="оформить">
         </form>
@@ -320,6 +320,10 @@
     <!-- jQuery lib-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Custom scripts-->
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/additional-methods.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

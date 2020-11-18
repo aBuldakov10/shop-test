@@ -209,6 +209,29 @@
   });
 
   /** Validate form **/
-
-
+  $('.validate').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 5
+      },
+      phone: "required",
+      mail: {
+        required: true,
+        mail: true
+      }
+    },
+    messages: {
+      mail: {
+        required: 'надо ввести мыло'
+      },
+      phone: {
+        required: 'надо в формате +38(___)___-___-____'
+      },
+      name: {
+        required: 'надо вести имя',
+        minlength: 'имя надо длиннее 5 символов'
+      }
+    }
+  });
 })(jQuery);
